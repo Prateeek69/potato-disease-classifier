@@ -217,7 +217,7 @@ export const ImageUpload = () => {
             Potato Disease Classification
           </Typography>
           <div className={classes.grow} />
-          <Avatar src={cblogo}></Avatar>
+          <img src={cblogo} alt="Logo" style={{ width: 50, height: 50, objectFit: 'contain' }} />
         </Toolbar>
       </AppBar>
       <Container maxWidth={false} className={classes.mainContainer} disableGutters={true}>
