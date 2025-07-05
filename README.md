@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 🥔 Potato Disease Classifier - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **frontend** for a Deep Learning project that classifies **potato leaf diseases** into:
+- Early Blight 🍂  
+- Late Blight 🍃  
+- Healthy 🌿
 
-## Available Scripts
+The frontend is built using **React**, allowing users to **drag and drop an image of a potato leaf** and get instant predictions via the connected backend API.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🔍 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This frontend connects to a backend model trained on the [PlantVillage Dataset (Potato Leaves)](https://www.kaggle.com/datasets/arjuntejaswi/plant-village). The model achieves an accuracy of **92.46%** in classifying the leaf condition into:
+- **Early Blight**
+- **Late Blight**
+- **Healthy**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The backend processes the image and returns the predicted class, which is then displayed in the UI.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+- 🖼️ Drag & Drop potato leaf images
+- 🔄 Real-time prediction via backend API
+- 📱 Responsive and lightweight React interface
+- 📊 Model trained using deep learning (TensorFlow/Keras in backend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository
+```bash
+git clone https://github.com/Prateeek69/potato-disease-classifier.git
+cd potato-disease-classifier
+```
 
-### `npm run eject`
+### 2. Install dependencies
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. Run the development server
+```bash
+npm start
+```
+🔗 Backend Integration
+The frontend sends image data to this backend API for prediction:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```arduino 
+https://potato-disease-classifier-three.vercel.app/predict
+``` 
+Update the URL in your frontend code (App.js or wherever applicable) if your backend is deployed to a different server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📸 Example Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. 🖼️ Drag & drop a potato leaf image.
+2. 🔄 The app sends the image to the backend.
+3. 🧠 The backend returns the predicted disease class.
+4. 📋 The result is shown below the upload area.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧠 Model Training Details
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Model trained using a **Convolutional Neural Network (CNN)** on potato leaf images from the [PlantVillage dataset](https://www.kaggle.com/datasets/arjuntejaswi/plant-village).
+- Achieved **92.46% accuracy** on the validation set.
+- Training code and notebook are available in the **private backend repository**.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Dataset
 
-### Analyzing the Bundle Size
+The dataset used is available on Kaggle:  
+👉 [PlantVillage (Potato Leaves Subset)](https://www.kaggle.com/datasets/arjuntejaswi/plant-village)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 👨‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Prateek**  
+🔗 [GitHub](https://github.com/Prateeek69)
